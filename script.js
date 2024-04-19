@@ -19,7 +19,7 @@ window.onmousemove = function(e){
 }
 
 window.onresize = function(){
-    context.canvas.width  = document.documentElement.clientWidth * ratio;
+    context.canvas.width  = document.documentElement.clientWidth;
     context.canvas.height = document.documentElement.clientHeight;
     cb = stage.getBoundingClientRect();
 }
@@ -29,11 +29,11 @@ window.onresize();
 function create(){
   var d = 20;
   for(var i=-1; ++i<wide;){
-      var x = Math.floor((((cb.width-padding*2) / (wide-1)) * i) + padding) * ratio;
+      var x = Math.floor((((cb.width-padding*2) / (wide-1)) * i) + padding);
 
       for(var j=-1; ++j<high;){
 
-          var y = Math.floor((((cb.height-padding*2) / (high-1)) * j) + padding) * ratio;
+          var y = Math.floor((((cb.height-padding*2) / (high-1)) * j) + padding);
 
           dots.push({
               x: x,
@@ -59,7 +59,7 @@ function render(){
 
         var v = getV(s)
 
-        context.circle(s.x + v.x, s.y + v.y, s.size * ratio, true);
+        context.circle(s.x + v.x, s.y + v.y, s.size, true);
         context.fill();
     }
 

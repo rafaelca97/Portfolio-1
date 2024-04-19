@@ -322,10 +322,15 @@ a:active.btn {
     font-family: "Maiden Orange", serif;
     align-self: flex-start;
     margin-top: 0;
+    margin-right: 5%;
+  }
+
+  .disenio .number, .desarrollo .number {
+    margin-right: 4%;
   }
   
   .text {
-    margin-left: 20px;
+    margin-left: 30px;
     font-size: 20px;
     font-family: "Open Sans";
     flex: 1;
